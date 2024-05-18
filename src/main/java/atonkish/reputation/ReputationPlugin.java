@@ -32,7 +32,7 @@ public class ReputationPlugin implements IWailaPlugin {
             if (accessor instanceof EntityAccessor entityAccessor) {
                 Entity entity = entityAccessor.getEntity();
                 if (entity instanceof VillagerEntity) {
-                    tooltip.remove(Identifiers.CORE_OBJECT_NAME);
+                    tooltip.getTooltip().remove(Identifiers.CORE_OBJECT_NAME);
                 }
             }
         });

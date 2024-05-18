@@ -58,7 +58,7 @@ public enum VillagerSnitchProvider implements IEntityComponentProvider, IServerD
                 .ofNullable(villager.getCustomName())
                 .orElse(villager.getType().getName());
 
-        Text text = wailaConfig.getFormatting().title(name);
+        Text text = wailaConfig.getFormatting().registryName(name.getString());
         if (villagerData.isSnitch()) {
             String snitchTranslateKey = String.format("entity.%s.villager.snitch",
                     ReputationMod.MOD_ID);
